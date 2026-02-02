@@ -27,12 +27,21 @@ export function ContactSection({ phone, address, email, themeColor }: ContactPro
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Button size="lg" className="bg-white text-gray-900 hover:bg-gray-100 h-14 px-8 text-lg w-full sm:w-auto">
-                            <Phone className="w-5 h-5 mr-2" />
-                            Call {phone}
+                            <a href={`tel:${phone}`} className="flex items-center">
+                                <Phone className="w-5 h-5 mr-2 inline" />
+                                Call {phone}
+                            </a>
                         </Button>
                         <Button size="lg" className="bg-green-500 text-white hover:bg-green-600 h-14 px-8 text-lg w-full sm:w-auto border-transparent">
-                            <MessageCircle className="w-5 h-5 mr-2" />
-                            WhatsApp
+                            <a
+                                href={`https://api.whatsapp.com/send?phone=${phone}&text=Hello%2C%20I%20am%20interested%20in%20your%20services.`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center"
+                            >
+                                <MessageCircle className="w-5 h-5 mr-2" />
+                                WhatsApp
+                            </a>
                         </Button>
                     </div>
 

@@ -124,7 +124,7 @@ export const coachingData = {
     ],
     info: {
         address: "45, Knowledge Park, Station Road, Indore, MP",
-        phone: "+91 91234 56789",
+        phone: "+91 93018 25186",
         email: "admissions@excelinstitute.com",
         mapEmbed: "https://www.google.com/maps/embed?pb=...",
     },

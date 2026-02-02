@@ -61,10 +61,7 @@ export function Navbar({ title, links, ctaLabel, ctaHref = "#contact", themeColo
                         ))}
 
                         {phone && (
-                            <div className="flex items-center text-gray-600 dark:text-gray-400 gap-2 mr-2">
-                                <Phone className="w-4 h-4" />
-                                <span className="text-sm font-semibold">{phone}</span>
-                            </div>
+                            <a href={`tel:${phone}`} className="flex items-center text-gray-600 dark:text-gray-400 gap-2 mr-2 text-sm font-semibold"><Phone className="w-4 h-4" /> {phone}</a>
                         )}
 
                         <ModeToggle />
